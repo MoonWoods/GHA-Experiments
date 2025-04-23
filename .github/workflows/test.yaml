@@ -1,4 +1,4 @@
-name: Run one test
+name: Test Rapido
 run-name: Running ${{ inputs.testname }} on ${{ inputs.environment }}
 
 on:
@@ -6,4 +6,6 @@ on:
 
 jobs:
   test:
-    uses: ./.github/workflows/called.yml
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $PATH
