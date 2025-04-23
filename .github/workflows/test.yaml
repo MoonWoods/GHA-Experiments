@@ -3,9 +3,11 @@ run-name: Running ${{ inputs.testname }} on ${{ inputs.environment }}
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - run: echo $PATH
+      - run: env
